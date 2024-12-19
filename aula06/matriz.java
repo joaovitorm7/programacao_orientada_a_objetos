@@ -5,6 +5,8 @@ public class matriz {
         double [][] notas = new double[3][2];
         Scanner ent = new Scanner(System.in);
 
+        System.out.println("Digite as notas dos alunos");
+
         for(int l = 0; l < notas.length; l++){
             for(int c = 0; c < notas[l].length; c++){
                 System.out.println("Aluno: " + (l+1)+ " Nota: "+ (c+1));
@@ -13,7 +15,7 @@ public class matriz {
         }
         for(int l = 0; l < notas.length; l++){
             for(int c = 0; c < notas[l].length; c++){
-                System.out.println("Aluno: "+ (l+1)+ " nota "+ (c+1));
+                System.out.println("Aluno: "+ (l+1)+ " nota "+ (c+1) + " = " + notas[l][c]);
             }
         }
         for(int i = 0; i < notas.length; i++){
