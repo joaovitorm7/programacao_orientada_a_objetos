@@ -7,7 +7,7 @@ public class Main {
         c2.cadastrarConta(456, "Maria");
         c2.visualizarSaldo();
         System.out.println("***********************");
-        c1.cadastrarConta(123, "Aldo");
+        c1.cadastrarConta(123, "João");
         c1.visualizarConta();
         c1.depositar(700);
         c1.definirLimite(200);

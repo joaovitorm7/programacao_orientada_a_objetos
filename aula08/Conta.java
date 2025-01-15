@@ -41,7 +41,7 @@ public class Conta {
     }
     public void visualizarSaldo(){
         System.out.println("***** Dados da Conta****");
-        System.out.println("Numero:"+this.numero+" - Titular: "+this.titular);
+        System.out.println("Numero: "+this.numero+" - Titular: "+this.titular);
         System.out.println("Seu saldo é: "+this.saldo);
         System.out.println("Seu limite é: "+this.limite);
         System.out.println("Seu Saldo devedor é: "+this.saldoDevedor);
@@ -58,7 +58,7 @@ public class Conta {
                 this.saldo = 0;
                 this.limite=this.limite-valor2;
                 this.saldoDevedor=this.saldoDevedor+valor2;
-                System.out.println("Saque realizado com sucesso (uso do limite");
+                System.out.println("Saque realizado com sucesso (uso do limite)");
 
             }else{
                 System.out.println("Saldo insuficiente");
