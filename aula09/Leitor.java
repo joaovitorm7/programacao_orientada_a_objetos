@@ -2,6 +2,7 @@ package aula09;
 
 public class Leitor {
     private String nome;
+    @SuppressWarnings("unused")
     private int idade;
     private Livro livroEmprestado;
 
