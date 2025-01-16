@@ -2,24 +2,31 @@ package aula09;
 import java.util.ArrayList;
 
 public class Biblioteca {
-    public static void main(String[] args) {
-        ArrayList<String> livros = new ArrayList<String>();
+    private ArrayList<Livro> livros;
+
+    /*Construtor */
+    public Biblioteca(){
+        livros = new ArrayList<>();
     }
 
-    public void adicionarLivro(String livro){
-        ArrayList<String> livros = new ArrayList<String>();
+    public void adicionarLivro(Livro livro){
         livros.add(livro);
     }
+
     public void listarLivrosDisponiveis(){
-        ArrayList<String> livros = new ArrayList<String>();
-        for (int i = 0; i < livros.size(); i++) {
-            System.out.println(livros.get(i));
+        System.out.println("Livros Disponíveis: ");
+        for (Livro livro : livros) {
+            if(livro.isDisponivel()){
+                System.out.println("- " + livro.getTitulo());
+            }
         }
     }
     public void listarLivrosEmprestados(){
-        ArrayList<String> livros = new ArrayList<String>();
-        for (int i = 0; i < livros.size(); i++) {
-            System.out.println(livros.get(i));
+        System.out.println("Livros Emprestados: ");
+        for (Livro livro : livros) {
+            if(!livro.isDisponivel()){
+                System.out.println("- " + livro.getTitulo());
+            }
         }
     }
 }

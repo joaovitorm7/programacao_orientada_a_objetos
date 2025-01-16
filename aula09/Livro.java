@@ -1,20 +1,39 @@
 package aula09;
 
 public class Livro {
-    String titulo;
-    String autor;
-    int anoPublicacao;
-    boolean disponivel;
+    private String titulo;
+    private String autor;
+    private int anoPublicacao;
+    private boolean disponivel;
 
-    public void exibirDetalhes(String tituloLivro, String autorLivro, int anoPublicacaoLivro){
+    /*Construtor */
+    public Livro(String tituloLivro, String autorLivro, int anoPublicacaoLivro){
         this.titulo = tituloLivro;
         this.autor = autorLivro;
         this.anoPublicacao = anoPublicacaoLivro;
+        this.disponivel = true;
     } 
-    public void emprestrar(){
-        boolean disponivel = false;
+    /*Metódos */
+    public void exibirDetalhes(){
+        System.out.println("Título: " + titulo);
+        System.out.println("Autor: " + autor);
+        System.out.println("Ano de publicação: " + anoPublicacao);
+        System.out.println("Disponível: " + (disponivel ? "Sim" : "Não"));
+    }
+    public boolean emprestrar(){
+        if(disponivel){
+            disponivel = false;
+            return true;
+        }
+        return false;
     }
     public void devolver(){
-        boolean disponivel = true;
+        disponivel = true;
+    }
+    public boolean isDisponivel() {
+        return disponivel;
+    }
+    public String getTitulo() {
+        return titulo;
     }
 }
