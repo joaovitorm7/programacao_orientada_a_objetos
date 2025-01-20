@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Livro l1 = new Livro("O Senhor dos Anéis", "J.R.R. Tolkien", 1954);
         Livro l2 = new Livro("Harry Potter e a Pedra Filosofal", "J.K. Rowling", 1997);
-        Livro l3 = new Livro("Dom Quixote", "Miguel de Cervantes", 1605);
+        Livro l3 = new Livro("Até o Último Homeme", "Mel Gibson", 2016);
 
         Biblioteca biblioteca = new Biblioteca();
         biblioteca.adicionarLivro(l1);
