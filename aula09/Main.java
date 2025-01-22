@@ -5,7 +5,7 @@ public class Main {
         Livro l1 = new Livro("O Senhor dos Anéis", "J.R.R. Tolkien", 1954);
         Livro l2 = new Livro("Harry Potter e a Pedra Filosofal", "J.K. Rowling", 1997);
         Livro l3 = new Livro("Até o Último Homem", "Mel Gibson", 2016);
-
+        
         Biblioteca biblioteca = new Biblioteca();
         biblioteca.adicionarLivro(l1);
         biblioteca.adicionarLivro(l2);
@@ -30,7 +30,6 @@ public class Main {
         System.out.println("\n--- João devolve o livro ---");
         leitor1.devolverLivro();
     
-
         System.out.println("\n--- Status dos livros após a devolução ---");
         biblioteca.listarLivrosDisponiveis();
         biblioteca.listarLivrosEmprestados();
