@@ -12,8 +12,9 @@ public class Main {
             System.out.println("1. Adicionar um produto");
             System.out.println("2. Comparar dois produtos pelo ID");
             System.out.println("3. Comparar dois produtos pelo preço");
-            System.out.println("4. Listar todos os produtos");
-            System.out.println("5. Sair");
+            System.out.println("4. Comparar dois produtos pela categoria");
+            System.out.println("5. Listar todos os produtos");
+            System.out.println("6. Sair");
             System.out.print("Escolha uma opção: ");
             int opcao = scanner.nextInt();
             scanner.nextLine();
@@ -70,10 +71,30 @@ public class Main {
                     break;
 
                 case 4:
-                    loja.listarProdutos();
+                    System.out.print("Digite o ID do produto: ");
+                    id = scanner.nextLine();
+                    System.out.print("Digite a categoria do produto: ");
+                    categoria = scanner.nextLine();
+                    p1 = null;
+                    for (Produto p : loja.produtos) {
+                        if (p.id.equals(id)) p1 = p;
+                    }
+                    if (p1 != null) {
+                        if (p1.categoria.equals(categoria)) {
+                            System.out.println("O produto pertence à categoria informada.");
+                        } else {
+                            System.out.println("O produto não pertence à categoria informada.");
+                        }
+                        } else {
+                            System.out.println("Produto não encontrado.");
+                        }
                     break;
 
                 case 5:
+                    loja.listarProdutos();
+                    break;
+
+                case 6:
                     System.out.println("Encerrando o programa.");
                     scanner.close();
                     return;

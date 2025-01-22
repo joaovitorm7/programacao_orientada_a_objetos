@@ -30,6 +30,10 @@ public class Produto {
         }
     }
 
+    public boolean compararPorCategoria(Produto outroProduto) {
+        return this.categoria.equals(outroProduto.categoria);
+    }
+
     public String exibirDetalhes(){
         return "ID: " + id + "\nNome: " + nome + "\nCategoria: " + categoria + "\nPreço: " + preco;
     }
