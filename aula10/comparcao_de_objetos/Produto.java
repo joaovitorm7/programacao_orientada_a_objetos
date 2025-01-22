@@ -7,6 +7,7 @@ public class Produto {
     String categoria;
     double preco;
 
+    /* CONSTRUTOR */
     public Produto(String id, String nome, String categoria, double preco) {
         this.id = id;
         this.nome = nome;
@@ -14,12 +15,23 @@ public class Produto {
         this.preco = preco;
     }
 
-    public void CompararProdutoId(String id) {
-        if (this.id.equals(id)) {
-            System.out.println("Produto encontrado");
+    /* MÉTODOS */
+    public boolean compararPorId(Produto outroProduto) {
+        return this.id.equals(outroProduto.id);
+    }
+
+    public int compararPorPreco(Produto outroProduto) {
+        if(preco < outroProduto.preco) {
+            return -1;
+        } else if(preco == outroProduto.preco) {
+            return 0;
         } else {
-            System.out.println("Produto não encontrado");
+            return 1;
         }
+    }
+
+    public String exibirDetalhes(){
+        return "ID: " + id + "\nNome: " + nome + "\nCategoria: " + categoria + "\nPreço: " + preco;
     }
 
 
