@@ -7,7 +7,7 @@ public class Produto {
     String categoria;
     double preco;
 
-    /* CONSTRUTOR */
+    
     public Produto(String id, String nome, String categoria, double preco) {
         this.id = id;
         this.nome = nome;
@@ -15,7 +15,7 @@ public class Produto {
         this.preco = preco;
     }
 
-    /* MÉTODOS */
+    
     public boolean compararPorId(Produto outroProduto) {
         return this.id.equals(outroProduto.id);
     }
