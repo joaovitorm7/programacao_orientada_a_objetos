@@ -1,4 +1,4 @@
-public class Carro {
+public class Carro extends Veiculo{
     // Atributos
     String modelo;
     int ano;
@@ -7,6 +7,12 @@ public class Carro {
     public Carro(String modelo, int ano) {
         this.modelo = modelo;
         this.ano = ano;
+    }
+
+    //Sobrescrevendo o método mover
+    @Override
+    public void mover(){
+        System.out.println("O carro está acelerando na estrada!");
     }
 
     // Metódos
