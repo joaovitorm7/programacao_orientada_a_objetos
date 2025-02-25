@@ -13,5 +13,9 @@ public class Carro {
     public void acelerar(){
         System.out.println("Meu carro "+ modelo +" está acelerando");
     }
+
+    public void acelerar(double velocidade, int marchas){
+        System.out.println("Meu carro " + modelo + "está andando a " + velocidade + "km/h e está na marcha " + marchas);
+    }
     
 }
