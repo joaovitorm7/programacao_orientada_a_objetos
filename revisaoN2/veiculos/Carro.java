@@ -1,4 +1,6 @@
-public class Carro extends Veiculo{
+package veiculos;
+
+public class Carro {
     // Atributos
     private String modelo;
     private int ano;
@@ -30,7 +32,6 @@ public class Carro extends Veiculo{
     }
 
     //Sobrescrevendo o método mover
-    @Override
     public void mover(){
         System.out.println("O carro está acelerando na estrada!");
     }
